@@ -14,9 +14,45 @@
 
 ## How to Run This Locally
 
-To set up and test this backend architecture on your local machine, run the following commands in sequence:
+Follow these steps to set up and run the backend on your local machine.
+
+---
 
 ### 1. Clone the Repository
+
 ```bash
-git clone [https://github.com/mihirkamat03/FastAPI-Backend.git](https://github.com/mihirkamat03/FastAPI-Backend.git)
+git clone https://github.com/mihirkamat03/FastAPI-Backend.git
 cd FastAPI-Backend
+```
+
+---
+
+### 2. Create & Activate Virtual Environment
+
+#### Windows
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+#### macOS / Linux
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+### 3. Install Dependencies
+
+```bash
+pip install fastapi "uvicorn[standard]"
+```
+
+---
+
+### 4. Run the Development Server
+
+```bash
+uvicorn main:app --reload
+```
